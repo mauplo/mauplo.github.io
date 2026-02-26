@@ -119,21 +119,73 @@
         }
 
         /* Responsive Design for Mobile */
+        /* Responsive Design for Mobile - Estilo PDF Compacto */
         @media (max-width: 768px) {
+            body {
+                background-color: #fff; /* Fondo blanco continuo */
+                font-size: 0.85rem; /* Fuente base más pequeña */
+                line-height: 1.4; /* Interlineado más apretado */
+            }
+            
             .cv-container {
                 margin: 0;
-                padding: 30px 20px;
+                padding: 20px 15px; /* Reducimos drásticamente los márgenes laterales y superiores */
                 box-shadow: none;
                 border-radius: 0;
             }
-            
+
+            header {
+                margin-bottom: 20px; /* Menos espacio debajo del encabezado */
+            }
+
+            h1 {
+                font-size: 1.6rem; /* Nombre más pequeño */
+                margin-bottom: 4px;
+            }
+
+            .contact-info {
+                font-size: 0.8rem;
+            }
+
+            section {
+                margin-bottom: 20px; /* Menos espacio entre secciones */
+            }
+
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                padding-bottom: 4px;
+            }
+
+            /* Mantenemos el título y la fecha en la misma línea si caben, o muy juntos si no */
             .flex-header {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap; 
+                margin-bottom: 2px;
+            }
+
+            .item-title {
+                font-size: 0.9rem;
             }
 
             .date {
-                margin-bottom: 4px;
+                font-size: 0.8rem;
+                margin-bottom: 0;
+            }
+
+            .item-subtitle {
                 font-size: 0.85rem;
+                margin-bottom: 4px;
+            }
+
+            .description {
+                font-size: 0.85rem;
+                margin-bottom: 12px; /* Reducimos el espacio después de cada párrafo */
+            }
+
+            .text-block {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
             }
         }
 
