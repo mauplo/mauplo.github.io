@@ -4,132 +4,262 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mauricia Peña - Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base reset and styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f9fa; /* Soft background for the screen */
+            color: #2b2b2b;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            -webkit-font-smoothing: antialiased;
         }
-        h1, h2 {
-            color: #2c3e50;
+
+        /* The 'PDF' Page Container */
+        .cv-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 60px 80px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
         }
+
+        /* Header / Contact Info */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         h1 {
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
-        section {
-            margin-bottom: 30px;
-        }
-        .item-title {
-            font-weight: bold;
-        }
-        .date {
-            font-style: italic;
+
+        .contact-info {
+            font-size: 0.95rem;
             color: #555;
+        }
+
+        .contact-info a {
+            color: #0056b3;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: #003d82;
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Layout for Job/Project Titles and Dates */
+        .flex-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #222;
+        }
+
+        .item-subtitle {
+            font-weight: 500;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #666;
+            white-space: nowrap; /* Prevents dates from breaking into two lines */
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* Simple text blocks */
+        .text-block {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 0;
+                padding: 30px 20px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .flex-header {
+                flex-direction: column;
+            }
+
+            .date {
+                margin-bottom: 4px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Print formatting (removes shadows and margins when printed to PDF) */
+        @media print {
+            body {
+                background-color: #fff;
+            }
+            .cv-container {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<h1>Mauricia Peña – Curriculum Vitae</h1>
+<div class="cv-container">
+    <header>
+        <h1>Mauricia Peña</h1>
+        <div class="contact-info">
+            <a href="https://www.linkedin.com/in/mauricia-p-bb3a2017a/" target="_blank">LinkedIn</a> |
+            <span>CDMX, Mexico</span>
+        </div>
+    </header>
 
-<section>
-    <h2>Education</h2>
-    <p><strong>Instituto Tecnológico Autónomo de México (ITAM), CDMX</strong><br>
-    BS, Applied Mathematics<br>
-    BE, Computer Engineering<br>
-    Relevant coursework: Advanced Data Structures, Databases, Linear Algebra, Multivariable Calculus, Probability Calculus and Mathematical Statistics.
-    GPA: 9.15/10
-    <span class="date">Aug 2022 – present</span></p>
+    <section>
+        <h2>Education</h2>
+        <div class="flex-header">
+            <div class="item-title">Instituto Tecnológico Autónomo de México (ITAM)</div>
+            <div class="date">Aug 2022 – present</div>
+        </div>
+        <div class="item-subtitle">BS, Applied Mathematics & BE, Computer Engineering</div>
+        <p class="description">
+            <strong>Relevant coursework:</strong> Advanced Data Structures, Databases, Linear Algebra, Multivariable Calculus, Probability Calculus, Mathematical Statistics, Embedded Systems.<br>
+            <strong>GPA:</strong> 9.15/10
+        </p>
+    </section>
 
-    <p><em>Relevant coursework:</em> Advanced Data Structures, Databases, Linear Algebra, Multivariable Calculus, Probability Calculus, Embedded Systems</p>
-</section>
+    <section>
+        <h2>Experience</h2>
 
-<section>
-    <h2>Experience</h2>
+        <div class="flex-header">
+            <div class="item-title">Summer Intern</div>
+            <div class="date">Jun – Aug 2025</div>
+        </div>
+        <div class="item-subtitle">Arkham Technologies | CDMX, Mexico</div>
+        <p class="description">Interned as a full-stack developer on data infrastructure projects for enterprise clients. Contributed to backend systems, frontend interfaces, and prompt engineering efforts that supported real-time alerting, dynamic data connections, and AI copilots for asset management workflows.</p>
 
-    <p class="item-title">Summer Intern, Arkham Technologies, CDMX, Mexico</p>
-    <p>Interned as a full-stack developer on data infrastructure projects for enterprise clients. Contributed to backend systems, frontend interfaces, and prompt engineering efforts that supported real-time alerting, dynamic data connections, and AI copilots for asset management workflows.<br>
-    <span class="date">Jun – Aug 2025</span></p>
+        <div class="flex-header">
+            <div class="item-title">Project Intern</div>
+            <div class="date">Jul – Aug 2024</div>
+        </div>
+        <div class="item-subtitle">Business Data Evolution | CDMX, Mexico</div>
+        <p class="description">Implemented LLMs in the development of a demo app to extract 10 information fields (single and multiple valued) from legal documents.</p>
 
-    <p class="item-title">Project Intern, Business Data Evolution, CDMX, Mexico</p>
-    <p>Implemented LLMs in the development of a demo app to extract 10 information fields (single and multiple valued) from legal documents.<br>
-    <span class="date">Jul – Aug 2024</span></p>
+        <div class="flex-header">
+            <div class="item-title">Organizer</div>
+            <div class="date">Feb 2024 – present</div>
+        </div>
+        <div class="item-subtitle">Coding Rush ITAM | CDMX, Mexico</div>
+        <p class="description">Recruited more than 20 volunteers and 100 participants to organize a high school programming competition. Designed and distributed 12 hours of course material.</p>
 
-    <p class="item-title">Organizer, Coding Rush ITAM, CDMX, Mexico</p>
-    <p>Recruited more than 20 volunteers and 100 participants to organize a high school programming competition. Designed and distributed 12 hours of course material.<br>
-    <span class="date">Feb 2024 – present</span></p>
+        <div class="flex-header">
+            <div class="item-title">Coding Instructor</div>
+            <div class="date">Jun 2023</div>
+        </div>
+        <div class="item-subtitle">Patrones Hermosos | CDMX, Mexico</div>
+        <p class="description">Collaborated in a coding bootcamp to motivate more than 60 girls from secondary schools in Mexico.</p>
 
-    <p class="item-title">Coding Instructor, Patrones Hermosos, CDMX, Mexico</p>
-    <p>Collaborated in a coding bootcamp to motivate more than 60 girls from secondary schools in Mexico.<br>
-    <span class="date">Jun 2023</span></p>
+        <div class="flex-header">
+            <div class="item-title">English Teacher</div>
+            <div class="date">Jan 2023</div>
+        </div>
+        <div class="item-subtitle">Construye ITAM | CDMX, Mexico</div>
+        <p class="description">Crafted bi-weekly English classes to educate kids from the Tizapán community.</p>
+    </section>
 
-    <p class="item-title">English Teacher, Construye ITAM, CDMX</p>
-    <p>Crafted bi-weekly English classes to educate kids from the Tizapán community.<br>
-    <span class="date">Jan 2023</span></p>
-</section>
+    <section>
+        <h2>Honors and Awards</h2>
 
-<section>
-    <h2>Honors and Awards</h2>
+        <div class="flex-header">
+            <div class="item-title">TREP Camp, Madrid</div>
+            <div class="date">April 2025</div>
+        </div>
+        <p class="description">Awarded a 100% scholarship for an entrepreneurship experience in Madrid because of internship performance and pitching skills.</p>
 
-    <p><strong>TREP Camp, Madrid</strong><br>
-    Awarded a 100% scolarhip for an entrepenurialship experience in Madrid because of internship performance and pithching skills.<br>
-    <span class="date">April 2025</span></p>
+        <div class="flex-header">
+            <div class="item-title">MAD Fellowship, EPIC Lab</div>
+            <div class="date">April 2025</div>
+        </div>
+        <p class="description">Selected for MAD Fellowship 2025, a competitive fellowship and summer internship program with a 22% acceptance rate.</p>
 
-    <p><strong>MAD Fellowship, EPIC Lab</strong><br>
-    Selected for MAD Fellowship 2025, a competitive fellowship and summer internship program with a 22% acceptance rate.<br>
-    <span class="date">April 2025</span></p>
+        <div class="flex-header">
+            <div class="item-title">1st Place Winner, DATATON, ANTAD & INEGI</div>
+            <div class="date">Nov 2025</div>
+        </div>
+        <p class="description">Competed in a consultancy-like case for real-estate selection and later informal work against the best teams from UNAM, Instituto Politécnico Nacional, ITAM and Tecnológico de Monterrey.</p>
 
-    <p><strong>1st Place Winner, DATATON, ANTAD & INEGI</strong><br>
-    Competed in a consultancy-like case for real-estate selection and later informal work against the best teams from UNAM, Instituto Politécnico Nacional, ITAM and Tecnológico de Monterrey.<br>
-    <span class="date">Nov 2025</span></p>
+        <div class="flex-header">
+            <div class="item-title">Academic Excellence, ITAM</div>
+            <div class="date">2022, 2023, 2024</div>
+        </div>
+        <p class="description">Repeated winner of a prestigious award for students with high GPAs.</p>
 
-    <p><strong>Academic Excellence, ITAM</strong><br>
-    Repeated winner of a prestigious award for students with high GPAs.<br>
-    <span class="date">2022, 2023, 2024</span></p>
+        <div class="flex-header">
+            <div class="item-title">Engineering Scholarship, ITAM</div>
+            <div class="date">Aug 2022 – Dec 2025</div>
+        </div>
+        <p class="description">Won and maintained a 75% scholarship for high-achieving engineering students for its complete duration.</p>
 
-    <p><strong>Engineering Scholarship, ITAM</strong><br>
-    Won and maintained a 75% scholarship for high-achieving engineering students for its complete duration.<br>
-    <span class="date">Aug 2022 – Dec 2025</span></p>
+        <div class="flex-header">
+            <div class="item-title">Finalist, DATATON, ANTAD & INEGI</div>
+            <div class="date">Nov 2024</div>
+        </div>
+        <p class="description">Used Python and mathematics to design efficiency functions for pharmacy location selection. Placement: 5/37.</p>
+    </section>
 
-    <p><strong>Finalist, DATATON, ANTAD & INEGI</strong><br>
-    Used Python and mathematics to design efficiency functions for pharmacy location selection. Placement: 5/37.<br>
-    <span class="date">Nov 2024</span></p>
-</section>
+    <section>
+        <h2>Recent Projects</h2>
 
-<section>
-    <h2>Recent Projects</h2>
-
-    <p><strong>Declaration Classifier</strong> – Team Project (Python)<br>
-    Programmed regular expressions for a Kotlin variable declaration parser.<br>
-    <span class="date">April 2025</span></p>
-
-    <p><strong>Automated Mobile Cart</strong> – Team Project (Assembly)<br>
-    Built and programmed a mobile cart using motors, an ultrasonic sensor, and an ATmega2560 microcontroller.<br>
-    <span class="date">March 2025</span></p>
-
-    <p><strong>Higher Ed Directory</strong> – Team Project (C#, SQL Server)</p>
-    <p>Designed and implemented a relational database for relationships between schools, locations, programs, and services. Used Entity Framework and ASP.NET for data modeling and UI integration.<br>
-    <span class="date">Jan 2024</span></p>
-</section>
-
-<section>
-    <h2>Languages</h2>
-    <p>English (Bilingual), Spanish (Native)</p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <p>Python (Proficient), Java (Proficient), SQL (Intermediate), Assembly (Beginner)</p>
-</section>
-
-<section>
-    <h2>Interests</h2>
-    <p>Crochet, drawing, indoor climbing</p>
-</section>
-
-</body>
-</html>
+        <div class="flex-header">
+            <div class="item-title">Declaration Classifier</div>
+            <div class="date">April 2025</div>
+        </div>
+        <div class
